@@ -40,6 +40,7 @@ function format (date, format) {
   parts['M'] = date.getMonth() + 1
   temp = parts['M']
   parts['MM'] = pad(temp, 2)
+  parts['MMM'] = temp
   parts['yyyy'] = date.getFullYear()
   temp = parts['yyyy']
   parts['yyy'] = pad(temp, 2) + 'y'

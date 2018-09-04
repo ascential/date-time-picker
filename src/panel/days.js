@@ -22,8 +22,10 @@ utils.extend(DaysPanel.prototype, {
       '<div class="picker-date picker-head-active" data-click="toMonths" data-active="active">' +
         utils.formatDate(
           this.picker.dateTime.now,
-          this.picker.config.MDW.replace('D', '#')
-        ).replace('#', this.picker.config.day[this.picker.dateTime.parsedNow.day]) +
+          this.picker.config.MDW.replace('D', '#').replace('MMM', '~')
+        )
+        .replace('#', this.picker.config.day[this.picker.dateTime.parsedNow.day])
+        .replace('~', this.picker.config.month[this.picker.dateTime.parsedNow.month]) +
       '</div>'
     )
   },
