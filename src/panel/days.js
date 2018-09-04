@@ -178,7 +178,13 @@ function buildCalendar (datetime, config, cls) {
   cls = ' picker-bdy-' + cls
   return (
     '<div class="picker-bdy' + cls + '">' +
-      '<div class="date-picker-title">' + utils.formatDate(datetime.now, config.YM) + '</div>' +
+      '<div class="date-picker-title">' +
+      utils.formatDate(
+        datetime.now,
+        config.YM.replace('MMM', '~')
+      )
+      .replace('~', this.picker.config.month[this.picker.dateTime.parsedNow.month]) +
+      '</div>' +
       '<div class="date-picker-days">' +
         '<div class="date-picker-days-title">' +
           config.shortDay.map(function (d) {
