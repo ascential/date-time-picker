@@ -183,7 +183,7 @@ function buildCalendar (datetime, config, cls) {
           datetime.now,
           config.YM.replace('MMM', '~')
         )
-        .replace('~', config.month[parsedNow.month]) +
+        .replace('~', config.month[datetime.parsedNow.month]) +
         '</div>' +
       '<div class="date-picker-days">' +
         '<div class="date-picker-days-title">' +
